@@ -3,8 +3,8 @@
 Bienvenue dans mon rapport de stage ! Je m'appelle Kilian ROSAK et j'ai eu l'opportunité de réaliser un stage chez Bashroom pour ma deuxième année à Toulouse Ynov Campus. Pendant cette période, j'ai eu l'occasion d'approfondir mes connaissances en infrastructure et en systèmes d'information, ainsi que de développer mes compétences professionnelles.
 
 <div style="display: flex; justify-content: center;">
-  <img src="../img/ya.svg" width="30%" height="220" alt="Bashroom">
-  <img src="../img/ynov.png" width="50%" alt="Ynov">
+  <img src="./img/ya.svg" width="30%" height="220" alt="Bashroom">
+  <img src="./img/ynov.png" width="50%" alt="Ynov">
 </div>
 
 Ce rapport de stage est composé de plusieurs sections qui retracent mon parcours, mes expériences et mes réflexions tout au long de cette expérience professionnelle enrichissante. Dans ce rapport sous forme de blog, vous découvrirez des informations sur l'entreprise où j'ai effectué mon stage, Bashroom, ainsi que les projets auxquels j'ai contribué et les compétences que j'ai acquises.
