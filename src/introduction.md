@@ -12,7 +12,7 @@ Ce rapport de stage est composé de plusieurs sections qui retracent mon parcour
 Le premier chapitre de ce rapport aborde le processus de création de mon blog, qui a servi de vitrine pour présenter mes réalisations, mes compétences et mes expériences professionnelles. J'ai choisi Github Pages pour maintenir la disponibilité de mon blog en ligne.
 
 <div style="display: flex; justify-content: center;">
-  <img src="../img/githubpages.png" height="320">
+  <img src="./img/githubpages.png" height="320">
 </div>
 
 Ensuite, je présenterai une page **à propos** qui permettra aux lecteurs et aux recruteurs de mieux me connaître, en mettant en avant mon parcours, mes compétences et mon curriculum vitae à jour. De plus, je fournirai une page **contact** pour faciliter les échanges avec les visiteurs intéressés par mon travail.
