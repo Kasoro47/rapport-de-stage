@@ -1,4 +1,4 @@
-# Summary
+# Sommaire
 
 - [Introduction](./introduction.md)
 - [À propos](./a_propos.md)
@@ -10,5 +10,4 @@
     - [Aspect technique](./aspect.md)
     - [Connaissances](./connaissances.md)
     - [Compétences](./competences.md)
-    - [Actualité](./actualite.md)
 - [Résumé](./resume.md)
