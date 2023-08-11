@@ -6,6 +6,9 @@ Bienvenue dans mon rapport de stage ! Je m'appelle Kilian ROSAK et j'ai eu l'opp
   <img src="./img/ya-dark.svg" max-width="30%" height="260" alt="Bashroom">
 </div>
 <div style="display: flex; justify-content: center;">
+  <p>Logo Bashroom</p>
+</div>
+<div style="display: flex; justify-content: center;">
   <img src="./img/ynov.png" max-width="50%" alt="Ynov">
 </div>
 
