@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html lang="fr" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Rapport de stage Kilian ROSAK</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="a_propos.html"><strong aria-hidden="true">2.</strong> À propos</a></li><li class="chapter-item expanded "><a href="contact.html"><strong aria-hidden="true">3.</strong> Contact</a></li><li class="chapter-item expanded "><a href="presentation.html"><strong aria-hidden="true">4.</strong> Présentation</a></li><li class="chapter-item expanded "><a href="articles.html"><strong aria-hidden="true">5.</strong> Articles</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="integration.html"><strong aria-hidden="true">5.1.</strong> Intégration</a></li><li class="chapter-item expanded "><a href="difficultes.html"><strong aria-hidden="true">5.2.</strong> Difficultés</a></li><li class="chapter-item expanded "><a href="aspect.html"><strong aria-hidden="true">5.3.</strong> Aspect technique</a></li><li class="chapter-item expanded "><a href="connaissances.html"><strong aria-hidden="true">5.4.</strong> Connaissances</a></li><li class="chapter-item expanded "><a href="competences.html"><strong aria-hidden="true">5.5.</strong> Compétences</a></li></ol></li><li class="chapter-item expanded "><a href="resume.html"><strong aria-hidden="true">6.</strong> Résumé</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Rapport de stage Kilian ROSAK</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>Bienvenue dans mon rapport de stage ! Je m'appelle Kilian ROSAK et j'ai eu l'opportunité de réaliser un stage chez <strong>Bashroom</strong> pour ma deuxième année à <strong>Toulouse Ynov Campus</strong>.</p>
+<div style="display: flex; justify-content: center;">
+  <img src="./img/ya.png" style="max-height: 300px; width: auto;" alt="Bashroom">
+</div>
+<div style="display: flex; justify-content: center;">
+  <p>Logo Bashroom</p>
+</div>
+<div style="display: flex; justify-content: center;">
+  <img src="./img/ynov.png" max-height="" alt="Ynov">
+</div>
+<p>Ce rapport de stage est composé de plusieurs sections qui retracent mon parcours, mes expériences et mes réflexions tout au long de cette expérience professionnelle enrichissante. Dans ce rapport sous forme de blog réalisé avec <strong>md-book</strong>, un outil <strong>open source</strong> réalisé en Rust pour créer des blogs. Vous découvrirez des informations sur l'entreprise où j'ai effectué mon stage, Bashroom, ainsi que les projets auxquels j'ai contribué et les compétences que j'ai acquises.</p>
+<p>Le premier chapitre de ce rapport aborde le processus de création de mon blog, qui a servi de vitrine pour présenter mes réalisations, mes compétences et mes expériences professionnelles. J'ai choisi <strong>Github Pages</strong> pour maintenir la disponibilité de mon blog en ligne.</p>
+<div style="display: flex; justify-content: center;">
+  <img src="./img/githubpages.png" max-height="400" alt="Github Pages">
+</div>
+<div style="display: flex; justify-content: center;">
+  <p>Logo Github Pages</p>
+</div>
+<p>Ensuite, je présenterai une page <strong>à propos</strong> qui permettra aux lecteurs de mieux me connaître, en mettant en avant mon parcours, mes compétences et mon curriculum vitae à jour. De plus, je fournirai une page <strong>contact</strong> pour faciliter les échanges avec les visiteurs intéressés par mon travail.</p>
+<p>Le rapport de stage se poursuivra avec une section dédiée au <strong>contexte</strong> et à la <strong>présentation</strong> de Bashroom. J'y décrirai l'entreprise, son historique, son activité et l'environnement de travail dans lequel j'ai évolué. Cette partie permettra aux lecteurs de mieux appréhender le cadre global de ma mission en entreprise.</p>
+<p>Enfin, la section <strong>articles</strong> sera consacrée aux différents sujets que j'ai abordés dans mon blog. J'ai rédigé des articles traitant de mon <strong>intégration</strong> chez Bashroom, des <strong>difficultés rencontrées</strong> et des solutions apportées, de l'<strong>aspect technique</strong> de mes missions, des <strong>connaissances mobilisées</strong> et des <strong>compétences</strong> acquises.</p>
+<p>J'espère que ce rapport de stage vous fournira un aperçu <strong>complet</strong> de mon expérience chez Bashroom et de ma progression professionnelle. Je vous invite à explorer les différentes sections pour en apprendre davantage sur mes réalisations, mes compétences et mes réflexions. Bonne lecture!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="À-propos"><a class="header" href="#À-propos">À propos</a></h1>
+<p>Bienvenue sur mon blog ! Je m'appelle Kilian ROSAK et je suis actuellement en stage chez <strong>Bashroom</strong> pour mon année Bachelor 2 à <strong>Toulouse Ynov Campus</strong>. Je suis passionné par l'<strong>Infrastructure</strong> et <strong>Systèmes d'Information</strong> ainsi que le <strong>Développement</strong>, et j'ai créé ce blog pour partager mes expériences et connaissances dans ces domaines.</p>
+<div style="display: flex; justify-content: center;">
+  <img src="./img/Toulouse_Ynov_Campus.jpg" min-width="10%" max-height="200px" alt="Ynov">
+</div>
+<div style="display: flex; justify-content: center;">
+  <p>Toulouse Ynov Campus</p>
+</div>
+<p>J'ai commencé mon stage chez Bashroom le 7 février 2023, où j'ai effectué une mission en utilisant en majorité <strong>Rust</strong>. Au fil du stage, j'ai développé des compétences dans la résolution de problèmes complexes et la mise en place de solutions efficaces pour répondre aux besoins de l'entreprise.</p>
+<p>Dans ce blog, je partagerai mes réalisations, mes projets et mes réflexions sur l'évolution des projets sur lesquels j'ai été assigné. Vous trouverez également mon <strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/kilian-rosak-b84740264/">ici</a> où mon <strong>Curriculum Vitae</strong> y est aussi publié.</p>
+<p>Vous avez la possibilité de sauvegarder mon blog tout entier en PDF en cliquant sur le bouton <strong>PDF</strong> en haut à droite de la page. Vous pouvez également naviguer dans les différentes sections du blog en utilisant le menu de navigation en haut à gauche.</p>
+<p>Je suis disponible pour toute question ou commentaire, n'hésitez pas à me contacter dans la rubrique <strong>contact</strong> ou en utilisant le lien vers mon profil LinkedIn. Merci de votre visite et j'espère que vous apprécierez mon travail!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contact"><a class="header" href="#contact">Contact</a></h1>
+<p>Pour me contacter par <strong>E-mail</strong>, utilisez l'adresse suivante : </p>
+<ul>
+<li>
+<p>Adresse Ynov : kilian.rosak@ynov.com</p>
+</li>
+<li>
+<p>Adresse Bashroom : kilian.rosak@bashroom.com</p>
+</li>
+</ul>
+<p>Vous pouvez également me suivre sur les <strong>réseaux sociaux</strong> pour rester informé des dernières mises à jour de mon blog et de mes projets professionnels :</p>
+<div style="display: flex; justify-content: center;">
+  <a href="https://www.linkedin.com/in/kilian-rosak-b84740264/">
+  <img src="./img/linkedin.png" style="max-height: 300px; width: auto;"></a>
+</div>
+<div style="display: flex; justify-content: center;">
+  <a href="https://github.com/Kasoro47">
+  <img src="./img/github.png" style="max-height: 300px; width: auto;"></a>
+</div>
+<p>N'hésitez pas à me contacter pour toute question ou commentaire. Merci de votre intérêt pour mon travail!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contexte-et-présentation-de-lentreprise"><a class="header" href="#contexte-et-présentation-de-lentreprise">Contexte et présentation de l'entreprise</a></h1>
+<p>Bienvenue dans la section dédiée au contexte et à la présentation de l'entreprise ! Actuellement en stage chez <strong>Bashroom</strong>, une entreprise spécialisée dans l'accompagnement des entreprises pour la conception et l'industrialisation de leurs <strong>preuves de concept</strong>. Basée à Balma, Bashroom collabore avec des clients issus de <strong>divers secteurs d'activité</strong>.</p>
+<p>L'environnement de travail chez Bashroom est à la fois <strong>dynamique</strong> et <strong>stimulant</strong>, favorisant une culture de l'<strong>innovation</strong> et de la <strong>collaboration</strong>. En tant que stagiaire, j'ai eu l'opportunité de m'impliquer activement dans plusieurs projets au sein de l'entreprise, ce qui m'a permis de développer mes compétences et de contribuer pleinement à son essor.</p>
+<p>Au travers de cette section de mon blog, j'aimerais partager mon expérience de travail au sein de Bashroom en vous fournissant des <strong>informations essentielles</strong> pour mieux appréhender le contexte global de ma mission. Vous découvrirez ainsi l'histoire et les activités de l'entreprise, ainsi que l'environnement de travail et le contexte dans lequel j'ai évolué.</p>
+<p>Il est important de souligner que toutes les informations fournies ici sont de nature <strong>personnelle</strong> et ne sont en aucun cas copiées à partir de brochures ou du site internet de l'entreprise. Mon objectif est de vous offrir une perspective authentique et honnête sur mon expérience de travail chez Bashroom.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="articles"><a class="header" href="#articles">Articles</a></h1>
+<p>Au cours de mon stage chez Bashroom, j'ai eu l'opportunité de m'investir pleinement dans un projet. Tout au long de mon blog, je vais partager mes <strong>expériences</strong> et <strong>réflexions</strong> sur mon stage, ainsi que mes connaissances et compétences acquises. Cela se fera en plusieurs articles, que vous pouvez retrouver ci-dessous.</p>
+<ul>
+<li>
+<p><a href="./integration.html">Intégration chez Bashroom</a></p>
+</li>
+<li>
+<p><a href="./difficultes.html">Difficultés rencontrées</a></p>
+</li>
+<li>
+<p><a href="./aspect.html">Aspect technique</a></p>
+</li>
+<li>
+<p><a href="./connaissances.html">Connaissances mobilisées</a></p>
+</li>
+<li>
+<p><a href="./competences.html">Compétences acquises</a></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mon-intégration-chez-bashroom-"><a class="header" href="#mon-intégration-chez-bashroom-">Mon intégration chez Bashroom :</a></h1>
+<p>Mon intégration chez Bashroom a été une étape cruciale de mon expérience de stage. Tout a commencé lorsque j'ai participé au projet <strong>YDays</strong> de mon école en pôle externe appelé Swarmine, auquel j'avais postulé au début de mon année de B2. C'est lors de ce projet que j'ai eu la chance de connaître Bashroom et de rencontrer Guillaume, qui est devenu mon maître de stage par la suite. Lors de mon intégration chez Bashroom, j'ai été chaleureusement accueilli par Guillaume et l'équipe, ce qui a immédiatement créé une atmosphère conviviale et propice à mon intégration.</p>
+<p>Lors des premières semaines, j'ai eu l'occasion de faire connaissance avec les membres de l'équipe, d'en apprendre davantage sur leur expertise et de comprendre la culture d'entreprise. Des <strong>réunions</strong> quotidiennes étaient organisées avec les membres de Bashroom. Durant toute la durée de mon stage, j'ai été présent à quasiment toutes ces réunions où l'équipe se réunit pour faire le point sur l'avancement des projets, partager les avancées et discuter des prochaines étapes. Cela m'a permis d'avoir une vision globale des activités de l'entreprise et de rester constamment informé des développements en cours.</p>
+<p>Les membres Bashroom ont été extrêmement collaboratifs et ouverts aux questions, même lorsque nous avons utilisé Slack pour nos communications. J'ai toujours pu compter sur leur <strong>soutien</strong> et leur <strong>expertise</strong> à chaque fois que j'ai rencontré des difficultés ou que j'avais besoin de conseils, que ce soit via les messages <strong>Slack</strong> ou lors de nos appels en ligne. Cette atmosphère de travail favorable, renforcée par nos interactions sur Slack, a grandement contribué à ma progression et à mon intégration réussie chez Bashroom.</p>
+<div style="display: flex; justify-content: center;">
+  <img src="./img/Slack.svg" style="max-height: 250px; height: 250px; width: auto;" alt="Bashroom">
+</div>
+<div style="display: flex; justify-content: center;">
+  <p>Logo Slack</p>
+</div>
+<p>En résumé, mon intégration chez Bashroom a été une étape clé de mon stage. J'ai été accueilli de manière bienveillante, j'ai bénéficié d'un accompagnement et d'une formation adaptée, et j'ai pu m'intégrer rapidement à la dynamique de l'entreprise. Cette expérience a été fondamentale pour ma <strong>croissance professionnelle</strong> au sein de Bashroom.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="les-difficultés-rencontrées-et-les-solutions-apportées-"><a class="header" href="#les-difficultés-rencontrées-et-les-solutions-apportées-">Les difficultés rencontrées et les solutions apportées :</a></h1>
+<p>Tout projet peut être confronté à des <strong>difficultés</strong>, et j'ai été confronté à plusieurs défis tout au long de mon stage. Je vais expliquer comment j'ai surmonté ces difficultés et les solutions que j'ai apportées pour garantir la réussite de mes projets.</p>
+<p>J'ai été confronté à certaines difficultés inhérentes aux projets complexes que j'ai réalisés. Cependant, grâce à mon <strong>esprit d'adaptation</strong> et à l'aide précieuse des membres de Bashroom, j'ai pu trouver des solutions efficaces pour les surmonter.</p>
+<p>L'une des difficultés auxquelles j'ai été confronté était la nécessité de m'adapter à des technologies et à des concepts nouveaux pour moi. En tant que stagiaire, j'ai dû rapidement assimiler de nouvelles connaissances et maîtriser des outils techniques spécifiques, surtout en <strong>Rust</strong>. Pour relever ce défi, j'ai consacré du temps à la recherche, à la formation en ligne et à l'échange avec les membres de l'équipe. Grâce à cette démarche proactive, j'ai pu acquérir les compétences nécessaires et me sentir plus à l'aise avec ces nouvelles technologies.</p>
+<p>Une autre difficulté que j'ai rencontrée était la <strong>gestion</strong> de mon temps et des <strong>priorités</strong>. Avec plusieurs projets en cours à Ynov et à Bashroom, il était crucial de bien organiser mon travail pour respecter les délais pour mes rendus de projets et livrer des résultats de qualité. Pour résoudre ce défi, j'ai sauvegardé ma progression régulièrement sur Gitlab et j'ai adopté une approche structurée en établissant des priorités claires. J'ai également communiqué régulièrement avec mon mentor pour m'assurer de rester sur la bonne voie et d'obtenir son soutien si nécessaire.</p>
+<div style="display: flex; justify-content: center;">
+  <img src="./img/handshake.png" style="max-height: 300px; width: auto;" alt="Bashroom">
+</div>
+<p>En conclusion, malgré les difficultés rencontrées, j'ai pu trouver des solutions adaptées pour les surmonter grâce à ma détermination, ma recherche de connaissances et le soutien de l'équipe chez Bashroom. Ces défis ont été des occasions d'apprentissage et de croissance professionnelle, me permettant de développer des compétences précieuses dans la résolution de problèmes.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="laspect-technique-des-missions-effectuées-"><a class="header" href="#laspect-technique-des-missions-effectuées-">L'aspect technique des missions effectuées :</a></h1>
+<p>Au début de mon stage, il était prévu que j'acquière et développe des compétences en Bash, Docker, Kubernetes, Linux, Node.js, NestJS et TypeScript, tel que mentionné dans la convention de stage. Cependant, au fil de mon parcours, les priorités et les besoins de l'entreprise ont <strong>évolué</strong>, ce qui a entraîné un changement de mission pour moi. Finalement, j'ai été assigné au développement en Rust, ce qui m'a offert l'opportunité d'approfondir mes compétences dans ce langage de programmation spécifique. Bien que je n'aie pas travaillé directement avec Node.js, NestJS et TypeScript, cette expérience m'a permis de développer une expertise précieuse dans un autre domaine technologique et de contribuer efficacement aux projets de l'entreprise.</p>
+<div style="display: flex; justify-content: center;">
+  <img src="./img/Rust_programming_language_black_logo.svg" style="max-height: 250px; height: 250px; width: auto;" alt="Bashroom">
+</div>
+<div style="display: flex; justify-content: center;">
+  <p>Logo Rust</p>
+</div>
+<p>Ma mission principale a été de développer une application en ligne de commande (CLI) en Rust pour gérer la <strong>dev-station</strong> de mon entreprise chez Bashroom. Avec l'aide de mon maître de stage Guillaume, j'ai conçu et implémenté cette application qui permet de gérer efficacement les ressources et les configurations de l'environnement de développement de l'entreprise.</p>
+<p>Mon rôle dans ce projet consistait à établir une architecture solide pour l'application, en utilisant les bonnes pratiques de développement en Rust. J'ai développé des fonctionnalités telles que la gestion des <strong>dépendances</strong>, la configuration des <strong>outils de développement</strong> et <strong>l'automatisation</strong> de certaines <strong>tâches récurrentes</strong>. L'objectif était de fournir une solution conviviale et performante pour les développeurs internes, en <strong>optimisant</strong> leur flux de travail et en facilitant la mise en place de leur environnement de développement.</p>
+<p>Ce projet m'a permis d'approfondir mes compétences en programmation en Rust, tout en acquérant une expérience précieuse dans le développement Rust. Cette mission m'a permis de jouer un rôle dans l'augmentation de la productivité du développement chez Bashroom en réalisant ce projet de manière autonome.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="les-connaissances-mobilisées-lors-des-missions-"><a class="header" href="#les-connaissances-mobilisées-lors-des-missions-">Les connaissances mobilisées lors des missions :</a></h1>
+<p>Pendant mon stage chez Bashroom, j'ai pu mobiliser diverses connaissances acquises tout au long de ma formation et de mes expériences antérieures. Ces connaissances ont joué un rôle clé dans la <strong>réussite</strong> de ma mission et ont contribué à mon développement professionnel.</p>
+<p>Mes connaissances en programmation ont été largement utilisées dans les missions techniques auxquelles j'ai participé. Mon expérience dans des <strong>langages orientés objet</strong> tels que le C et C++ m'a permis de développer des solutions logicielles efficaces et robustes.</p>
+<p>Mes compétences en systèmes d'exploitation ont également été mobilisées lors de ma mission. Ma connaissance approfondie de <strong>Linux</strong> m'a permis de gagner beaucoup de temps car le PC de développement de Bashroom fonctionne sous Linux.</p>
+<div style="display: flex; justify-content: center;">
+  <img src="./img/linux.png" style="max-height: 300px; width: auto;" alt="Bashroom">
+</div>
+<div style="display: flex; justify-content: center;">
+  <p>Logo Linux</p>
+</div>
+<p>En somme, les connaissances mobilisées lors de ma mission chez Bashroom ont été très <strong>enrichissantes</strong>. Ces connaissances ont été un atout précieux pour répondre aux défis techniques.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="les-compétences-acquises-"><a class="header" href="#les-compétences-acquises-">Les compétences acquises :</a></h1>
+<p>Au cours de mon stage chez Bashroom, j'ai pu développer et renforcer un large éventail de compétences qui se sont révélées <strong>essentielles</strong> pour mon parcours professionel</p>
+<p>J'ai eu l'opportunité de développer et de renforcer mes compétences en <strong>Rust</strong>. J'ai travaillé sur des projets qui m'ont permis d'explorer les fonctionnalités et les bonnes pratiques de ce langage de programmation moderne et performant. J'ai pu mettre en pratique les concepts clés de Rust tels que la <strong>gestion d'erreur</strong>, l'<strong>implémentation</strong> de modules et l'utilisation des <strong>traits</strong>. Cette expérience m'a permis de devenir plus à l'aise avec Rust et de l'utiliser efficacement pour créer des solutions logicielles robustes et fiables.</p>
+<div style="display: flex; justify-content: center;">
+  <img src="./img/example.png" style="max-height: 300px; width: auto;" alt="Bashroom">
+</div>
+<div style="display: flex; justify-content: center;">
+  <p>Exemple simple d'error handling en Rust</p>
+</div>
+<p>De plus, j'ai également développé des compétences en automatisation grâce à l'utilisation d'outils tels que le <strong>Bash</strong>. Cette compétence m'a permis de gagner du temps, d'éliminer les erreurs manuelles et de favoriser une approche plus efficace et fiable dans la gestion des systèmes.</p>
+<div style="display: flex; justify-content: center;">
+  <img src="./img/bash.png" style="max-height: 300px; width: auto;" alt="Bashroom">
+</div>
+<div style="display: flex; justify-content: center;">
+  <p>Logo Bash</p>
+</div>
+<p>Enfin, j'ai également renforcé mes compétences en matière de collaboration et de communication au sein de Bashroom. J'ai appris à <strong>communiquer</strong> et expliquer là où je bloquais, à <strong>partager</strong> des connaissances, à résoudre des problèmes de manière collective et à contribuer positivement aux projets.</p>
+<p>En somme, mon stage chez Bashroom m'a offert une opportunité précieuse de développer et d'enrichir mes compétences techniques. C'est une expérience pratique précieuse pour ma future carrière professionnelle.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="résumé"><a class="header" href="#résumé">Résumé</a></h1>
+<p>En résumé, ce blog vise à valoriser mes connaissances, compétences et expériences professionnelles, tout en servant de <strong>support</strong> lors de mes recherches d'alternance et d'emploi.</p>
+<p>Grâce à cette expérience <strong>enrichissante</strong>, j'ai réussi à obtenir une opportunité d'alternance chez Bashroom, ce qui témoigne de la reconnaissance de mon travail et de mon intégration réussie au sein de l'entreprise.</p>
+<p>J'ai partagé mes expériences d'intégration, mes défis rencontrés et les solutions apportées, ainsi que mes connaissances mobilisées lors des missions techniques.</p>
+<p>Je suis impatient de continuer à élargir mes compétences et à apporter ma <strong>contribution</strong> chez Bashroom!</p>
+<p>Merci de m'avoir suivi dans ce rapport! J'espère que mon blog vous a été utile et inspirant, et je vous encourage à me contacter pour toute question ou suggestion.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
