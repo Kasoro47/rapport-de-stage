@@ -7,7 +7,7 @@ Mes connaissances en programmation ont été largement utilisées dans les missi
 Mes compétences en systèmes d'exploitation ont également été mobilisées lors de ma mission. Ma connaissance approfondie de **Linux** m'a permis de gagner beaucoup de temps car le PC de développement de Bashroom fonctionne sous Linux.
 
 <div style="display: flex; justify-content: center;">
-  <img src="./img/linux.png" max-width="30%" height="260" alt="Bashroom">
+  <img src="./img/linux.png" style="max-height: 300px; width: auto;" alt="Bashroom">
 </div>
 <div style="display: flex; justify-content: center;">
   <p>Logo Linux</p>

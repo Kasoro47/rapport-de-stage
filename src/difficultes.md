@@ -9,7 +9,7 @@ L'une des difficultés auxquelles j'ai été confronté était la nécessité de
 Une autre difficulté que j'ai rencontrée était la **gestion** de mon temps et des **priorités**. Avec plusieurs projets en cours à Ynov et à Bashroom, il était crucial de bien organiser mon travail pour respecter les délais pour mes rendus de projets et livrer des résultats de qualité. Pour résoudre ce défi, j'ai sauvegardé ma progression régulièrement sur Gitlab et j'ai adopté une approche structurée en établissant des priorités claires. J'ai également communiqué régulièrement avec mon mentor pour m'assurer de rester sur la bonne voie et d'obtenir son soutien si nécessaire.
 
 <div style="display: flex; justify-content: center;">
-  <img src="./img/handshake.png" max-width="30%" height="400" alt="Bashroom">
+  <img src="./img/handshake.png" style="max-height: 300px; width: auto;" alt="Bashroom">
 </div>
 
 En conclusion, malgré les difficultés rencontrées, j'ai pu trouver des solutions adaptées pour les surmonter grâce à ma détermination, ma recherche de connaissances et le soutien de l'équipe chez Bashroom. Ces défis ont été des occasions d'apprentissage et de croissance professionnelle, me permettant de développer des compétences précieuses dans la résolution de problèmes.

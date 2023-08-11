@@ -10,12 +10,12 @@ Vous pouvez également me suivre sur les **réseaux sociaux** pour rester inform
 
 <div style="display: flex; justify-content: center;">
   <a href="https://www.linkedin.com/in/kilian-rosak-b84740264/">
-  <img src="./img/linkedin.png" height="250px"></a>
+  <img src="./img/linkedin.png" style="max-height: 300px; width: auto;"></a>
 </div>
 
 <div style="display: flex; justify-content: center;">
   <a href="https://github.com/Kasoro47">
-  <img src="./img/github.png" height="250px"></a>
+  <img src="./img/github.png" style="max-height: 300px; width: auto;"></a>
 </div>
 
 N'hésitez pas à me contacter pour toute question ou commentaire. Merci de votre intérêt pour mon travail!

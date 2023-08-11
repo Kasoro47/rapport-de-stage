@@ -3,13 +3,13 @@
 Bienvenue dans mon rapport de stage ! Je m'appelle Kilian ROSAK et j'ai eu l'opportunité de réaliser un stage chez **Bashroom** pour ma deuxième année à **Toulouse Ynov Campus**.
 
 <div style="display: flex; justify-content: center;">
-  <img src="./img/ya-dark.svg" max-width="30%" height="260" alt="Bashroom">
+  <img src="./img/ya.png" style="max-height: 300px; width: auto;" alt="Bashroom">
 </div>
 <div style="display: flex; justify-content: center;">
   <p>Logo Bashroom</p>
 </div>
 <div style="display: flex; justify-content: center;">
-  <img src="./img/ynov.png" max-width="50%" alt="Ynov">
+  <img src="./img/ynov.png" max-height="" alt="Ynov">
 </div>
 
 Ce rapport de stage est composé de plusieurs sections qui retracent mon parcours, mes expériences et mes réflexions tout au long de cette expérience professionnelle enrichissante. Dans ce rapport sous forme de blog réalisé avec **md-book**, un outil **open source** réalisé en Rust pour créer des blogs. Vous découvrirez des informations sur l'entreprise où j'ai effectué mon stage, Bashroom, ainsi que les projets auxquels j'ai contribué et les compétences que j'ai acquises.
@@ -17,7 +17,7 @@ Ce rapport de stage est composé de plusieurs sections qui retracent mon parcour
 Le premier chapitre de ce rapport aborde le processus de création de mon blog, qui a servi de vitrine pour présenter mes réalisations, mes compétences et mes expériences professionnelles. J'ai choisi **Github Pages** pour maintenir la disponibilité de mon blog en ligne.
 
 <div style="display: flex; justify-content: center;">
-  <img src="./img/githubpages.png" height="400" alt="Github Pages">
+  <img src="./img/githubpages.png" max-height="400" alt="Github Pages">
 </div>
 <div style="display: flex; justify-content: center;">
   <p>Logo Github Pages</p>

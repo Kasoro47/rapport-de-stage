@@ -7,7 +7,7 @@ Lors des premières semaines, j'ai eu l'occasion de faire connaissance avec les 
 Les membres Bashroom ont été extrêmement collaboratifs et ouverts aux questions, même lorsque nous avons utilisé Slack pour nos communications. J'ai toujours pu compter sur leur **soutien** et leur **expertise** à chaque fois que j'ai rencontré des difficultés ou que j'avais besoin de conseils, que ce soit via les messages **Slack** ou lors de nos appels en ligne. Cette atmosphère de travail favorable, renforcée par nos interactions sur Slack, a grandement contribué à ma progression et à mon intégration réussie chez Bashroom.
 
 <div style="display: flex; justify-content: center;">
-  <img src="./img/Slack.svg" max-width="30%" height="260" alt="Bashroom">
+  <img src="./img/Slack.svg" style="max-height: 250px; height: 250px; width: auto;" alt="Bashroom">
 </div>
 <div style="display: flex; justify-content: center;">
   <p>Logo Slack</p>

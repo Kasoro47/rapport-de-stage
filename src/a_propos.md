@@ -3,7 +3,7 @@
 Bienvenue sur mon blog ! Je m'appelle Kilian ROSAK et je suis actuellement en stage chez **Bashroom** pour mon année Bachelor 2 à **Toulouse Ynov Campus**. Je suis passionné par l'**Infrastructure** et **Systèmes d'Information** ainsi que le **Développement**, et j'ai créé ce blog pour partager mes expériences et connaissances dans ces domaines.
 
 <div style="display: flex; justify-content: center;">
-  <img src="./img/Toulouse_Ynov_Campus.jpg" max-width="50%" height="400px" alt="Ynov">
+  <img src="./img/Toulouse_Ynov_Campus.jpg" min-width="10%" max-height="200px" alt="Ynov">
 </div>
 <div style="display: flex; justify-content: center;">
   <p>Toulouse Ynov Campus</p>
