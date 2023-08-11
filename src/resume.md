@@ -2,7 +2,7 @@
 
 En résumé, ce blog vise à valoriser mes connaissances, compétences et expériences professionnelles, tout en servant de **support** lors de mes recherches d'alternance et d'emploi.
 
-En résumé, ce blog a pour objectif de valoriser mes connaissances, compétences et expériences professionnelles, tout en servant de support lors de mes recherches de stage, d'alternance et d'emploi. Grâce à cette expérience **enrichissante**, j'ai réussi à obtenir une opportunité d'alternance chez Bashroom, ce qui témoigne de la reconnaissance de mon travail et de mon intégration réussie au sein de l'entreprise.
+Grâce à cette expérience **enrichissante**, j'ai réussi à obtenir une opportunité d'alternance chez Bashroom, ce qui témoigne de la reconnaissance de mon travail et de mon intégration réussie au sein de l'entreprise.
 
 J'ai partagé mes expériences d'intégration, mes défis rencontrés et les solutions apportées, ainsi que mes connaissances mobilisées lors des missions techniques.
 
